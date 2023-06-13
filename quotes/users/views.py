@@ -35,7 +35,7 @@ def loginuser(request):
     if request.method == 'POST':
         user = authenticate(username=request.POST['username'], password=request.POST['password'])
         if user is None:
-            messages.error(request, 'Username or password didn\'t match')
+            messages.error(request, 'Username or password didnt match')
             return redirect(to='users:login')
 
         login(request, user)
